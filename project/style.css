@@ -1,0 +1,835 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-repeat: no-repeat;
+    width: 1282px;
+    min-height: 1583px;
+    font-size: 16px;
+    color: blue;
+    position: relative;
+    margin: 0;
+}
+
+/* temporary borders removed */
+.container > * {
+    border: none;
+}
+
+.container {
+    display: grid;
+    width: 1282px;
+
+    grid-template-rows: 47px 479px 104px 664px 133px;
+    grid-template-columns: 101px 751px 430px;
+
+    grid-template-areas:
+        "one six six"
+        "two two two"
+        "three three three"
+        "four four seven"
+        "five five five";
+}
+
+/* ========================= */
+/* BOX 1 */
+/* ========================= */
+
+.box1 {
+    grid-area: one;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+
+    overflow: hidden;
+}
+
+.box1 img {
+    width: 43px;
+    height: 47px;
+    object-fit: contain;
+    display: block;
+}
+
+/* ========================= */
+/* BOX 6 */
+/* ========================= */
+
+.box6 {
+    grid-area: six;
+    background: #ffffff;
+}
+
+.menu {
+    list-style: none;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 0.08em;
+    font-size: 15px;
+    font-weight: normal;
+    color: #383838;
+    background-color: transparent;
+
+    padding-right: 8px;
+}
+
+.menu li {
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.m1 {
+    flex-basis: 80px;
+    letter-spacing: 0;
+}
+
+.m2 {
+    flex-basis: 8px;
+    letter-spacing: 0.8px;
+}
+
+.m3 {
+    flex-basis: 18px;
+}
+
+.m4 {
+    flex-basis: 52px;
+}
+
+.m5 {
+    flex-basis: 86px;
+    font-weight: bold;
+}
+
+/* ========================= */
+/* BOX 2 */
+/* ========================= */
+
+.box2 {
+    grid-area: two;
+    position: relative;
+    height: 479px;
+    overflow: hidden;
+
+    background-image: url("bishkek-night.jpg");
+    background-size: cover;
+    background-position: center -42px;
+    background-repeat: no-repeat;
+}
+
+.box2::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(35, 15, 15, 0.28);
+    z-index: 1;
+}
+
+.box2-inner {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+
+    grid-template-columns: 240px 584px 228px 230px;
+    grid-template-rows: 28px 20px 160px 35px 5px 40px 191px;
+}
+
+/* | ORGANIZATION | PEOPLE | */
+.box2-top-links {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-left: 23px;
+    margin-top: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.box2-top-links a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.box2-top-links span {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* Add your profile / Subscribe */
+.box2-actions {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+.action-btn {
+    height: 35px;
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(150, 130, 120, 0.58);
+    color: #ffffff;
+    text-decoration: none;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* Search */
+.box2-search {
+    grid-column: 2 / 4;
+    grid-row: 6 / 7;
+
+    width: 800px;
+    height: 40px;
+
+    display: flex;
+}
+
+.box2-search input {
+    width: 720px;
+    height: 40px;
+
+    border: none;
+    outline: none;
+    padding-left: 11px;
+
+    background: #ffffff;
+    color: #777777;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.box2-search input::placeholder {
+    color: #777777;
+    opacity: 1;
+}
+
+.box2-search button {
+    width: 80px;
+    height: 40px;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    background: #ed0711;
+    color: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box2-search button i {
+    font-size: 18px;
+}
+
+/* ========================= */
+/* BOX 3 */
+/* ========================= */
+
+.box3 {
+    grid-area: three;
+    height: 104px;
+    background: #f3f3f3;
+
+    display: grid;
+    grid-template-columns: 14px 300px 370px 200px 1fr;
+    grid-template-rows: 49px 30px 25px;
+}
+
+.period-links {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+
+    display: flex;
+    align-items: center;
+    gap: 29px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.period-links a {
+    color: #004f70;
+    text-decoration: underline;
+}
+
+.people-count {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1;
+}
+
+.people-count .number {
+    color: #34485b;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.people-count .label {
+    color: #b8b8b8;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* ========================= */
+/* BOX 4 */
+/* ========================= */
+
+.box4 {
+    grid-area: four;
+
+    display: grid;
+    grid-template-columns: 385px 385px;
+    grid-auto-rows: 200px;
+    column-gap: 15px;
+    row-gap: 20px;
+
+    padding-top: 10px;
+    padding-left: 14px;
+
+    height: 664px;
+    background: #f7f7f7;
+    overflow: hidden;
+}
+
+.person-card {
+    display: grid;
+    grid-template-columns: 135px 210px;
+    column-gap: 11px;
+
+    height: 200px;
+}
+
+.person-card img {
+    width: 135px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.person-info {
+    padding-top: 2px;
+}
+
+.person-info h3 {
+    margin: 0 0 14px 0;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.35;
+    font-weight: 700;
+
+    color: #005174;
+}
+
+.person-info .birth {
+    margin: 0 0 11px 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12px;
+    line-height: 1;
+
+    color: #005174;
+}
+
+.person-info .birth span {
+    display: inline-block;
+
+    padding: 3px 6px;
+    margin-right: 4px;
+
+    background: #74d9df;
+    color: #ffffff;
+
+    font-size: 10px;
+    line-height: 1;
+}
+
+.person-info .desc {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    line-height: 1.42;
+
+    color: #666666;
+}
+
+/* ========================= */
+/* BOX 7 */
+/* ========================= */
+
+.box7 {
+    grid-area: seven;
+
+    height: 664px;
+    background: #f7f7f7;
+
+    padding-top: 28px;
+    padding-left: 39px;
+    padding-right: 39px;
+
+    overflow: hidden;
+    box-sizing: border-box;
+
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.sidebar-title {
+    display: flex;
+    align-items: center;
+    gap: 88px;
+
+    margin-bottom: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: #6f6f78;
+}
+
+.sidebar-title span {
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    line-height: 1;
+}
+
+.sidebar-title i {
+    font-size: 12px;
+    color: #555555;
+    line-height: 1;
+}
+
+.sidebar-list {
+    list-style: none;
+}
+
+.sidebar-list li {
+    height: 33px;
+    border-top: 1px solid #d3d3d3;
+
+    display: flex;
+    align-items: center;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #7b7b7b;
+    line-height: 1;
+}
+
+.sidebar-list li:last-child {
+    border-bottom: 1px solid #d3d3d3;
+}
+
+/* ========================= */
+/* BOX 5 */
+/* ========================= */
+
+.box5 {
+    grid-area: five;
+
+    height: 133px;
+    min-height: 133px;
+
+    background: #000000;
+    color: #ffffff;
+
+    font-family: Georgia, "Times New Roman", serif;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 69px 124px 71px 640px 44px 280px 54px;
+    grid-template-rows: 29px 19px 70px 15px;
+}
+
+.footer-logo {
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+}
+
+.footer-logo img {
+    width: 124px;
+    height: auto;
+    display: block;
+}
+
+.footer-text {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+
+    width: 640px;
+
+    font-size: 12px;
+    line-height: 1.45;
+    color: #ffffff;
+}
+
+.footer-text p {
+    margin: 0;
+}
+
+.footer-contacts {
+    grid-column: 6 / 7;
+    grid-row: 3 / 4;
+
+    width: 280px;
+
+    font-size: 12px;
+    line-height: 1.45;
+    color: #ffffff;
+}
+
+.footer-contacts p {
+    margin: 0;
+}
+
+.footer-contacts a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* ========================= */
+/* UNUSED BOXES */
+/* ========================= */
+
+.box8,
+.box9 {
+    display: none;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+.buttonMenu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.style-switcher {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    z-index: 2000;
+
+    padding: 5px 8px;
+
+    background: #c20000;
+    color: #ffffff;
+
+    border: none;
+    border-radius: 3px;
+
+    font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+/* ========================= */
+/* MOBILE VERSION */
+/* ========================= */
+
+@media (max-width: 500px) {
+    body {
+        width: 100%;
+        max-width: 100%;
+        min-height: auto;
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 100%;
+
+        grid-template-columns: 100%;
+        grid-template-rows:
+            47px
+            360px
+            100px
+            auto
+            auto
+            260px;
+
+        grid-template-areas:
+            "one"
+            "two"
+            "three"
+            "four"
+            "seven"
+            "five";
+    }
+
+    .box6 {
+        display: none;
+    }
+
+    .buttonMenu {
+        display: block;
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 2000;
+
+        background: #ffffff;
+        color: #000000;
+        border: 1px solid #cccccc;
+
+        width: 42px;
+        height: 42px;
+        font-size: 24px;
+    }
+
+    .box6.mobileMenu {
+        display: block;
+        position: fixed;
+        top: 50px;
+        right: 10px;
+        z-index: 1999;
+
+        width: 160px;
+        height: auto;
+
+        background: #ffffff;
+        border: 1px solid #cccccc;
+        padding: 10px;
+    }
+
+    .box6.mobileMenu .menu {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        padding-right: 0;
+        gap: 10px;
+    }
+
+    .box6.mobileMenu .menu li {
+        height: auto;
+        min-height: 0;
+        flex-basis: auto;
+    }
+
+    .box2 {
+        height: 360px;
+        min-height: 360px;
+        background-position: center center;
+    }
+
+    .box2-inner {
+        display: grid;
+        grid-template-columns: 15px 1fr 15px;
+        grid-template-rows: 24px 20px 96px 32px 13px 40px 135px;
+    }
+
+    .box2-top-links {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+
+        font-size: 12px;
+        gap: 8px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .box2-actions {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+
+        gap: 5px;
+    }
+
+    .action-btn {
+        height: 32px;
+        font-size: 12px;
+        padding: 0 10px;
+    }
+
+    .box2-search {
+        grid-column: 2 / 3;
+        grid-row: 6 / 7;
+
+        width: 100%;
+        height: 40px;
+    }
+
+    .box2-search input {
+        width: calc(100% - 55px);
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .box2-search button {
+        width: 55px;
+        height: 40px;
+    }
+
+    .box3 {
+        height: 100px;
+
+        grid-template-columns: 15px 1fr 15px;
+        grid-template-rows: 25px 25px 10px 25px 15px;
+    }
+
+    .period-links {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+
+        gap: 20px;
+    }
+
+    .people-count {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+    }
+
+    .box4 {
+        height: auto;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+
+        padding: 15px;
+        row-gap: 26px;
+        column-gap: 0;
+    }
+
+    .person-card {
+        grid-template-columns: 120px 1fr;
+        column-gap: 12px;
+        height: auto;
+    }
+
+    .person-card img {
+        width: 120px;
+        height: 175px;
+    }
+
+    .person-info h3 {
+        font-size: 14px;
+        line-height: 1.3;
+        margin-bottom: 10px;
+    }
+
+    .person-info .birth {
+        font-size: 11px;
+    }
+
+    .person-info .birth span {
+        font-size: 9px;
+        padding: 3px 5px;
+    }
+
+    .person-info .desc {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+
+    .box7 {
+        height: auto;
+        padding: 25px 20px 30px 20px;
+    }
+
+    .sidebar-title {
+        justify-content: space-between;
+        gap: 0;
+    }
+
+    .sidebar-title span {
+        font-size: 20px;
+    }
+
+    .sidebar-list li {
+        height: 32px;
+        font-size: 13px;
+    }
+
+    .box5 {
+        height: 260px;
+        min-height: 260px;
+
+        display: grid;
+        grid-template-columns: 25px 1fr 25px;
+        grid-template-rows: 25px 80px 15px 55px 10px 60px 15px;
+    }
+
+    .footer-logo {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .footer-logo img {
+        width: 100px;
+    }
+
+    .footer-text {
+        grid-column: 2 / 3;
+        grid-row: 4 / 5;
+
+        width: 100%;
+        font-size: 11px;
+    }
+
+    .footer-contacts {
+        grid-column: 2 / 3;
+        grid-row: 6 / 7;
+
+        width: 100%;
+        font-size: 11px;
+    }
+}

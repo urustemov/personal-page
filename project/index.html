@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 9</title>
+
+    <!-- Main stylesheet. JavaScript will switch this between style.css and style2.css -->
+    <link id="themeStyle" rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+    <!-- Style Switcher Button -->
+    <button id="styleSwitcher" class="style-switcher">Switch Style</button>
+
+    <!-- Hamburger Menu Button -->
+    <button class="buttonMenu">
+        <i class="fa fa-bars"></i>
+    </button>
+
+
+    <div class="container">
+
+        <!-- BOX 1: Logo -->
+        <div class="box1">
+            <img src="logo.png" alt="Who is Who logo">
+        </div>
+
+        <!-- BOX 6: Top Menu -->
+        <div class="box6">
+            <ul class="menu">
+                <li class="m1">Rating</li>
+                <li class="m2">Join</li>
+                <li class="m3"></li>
+                <li class="m4"></li>
+                <li class="m5">Menu</li>
+            </ul>
+        </div>
+
+        <!-- BOX 2: Hero Section -->
+        <div class="box2">
+            <div class="box2-inner">
+
+                <div class="box2-top-links">
+                    <a href="#">ORGANIZATION</a>
+                    <span>|</span>
+                    <a href="#">PEOPLE</a>
+                </div>
+
+                <div class="box2-actions">
+                    <a href="#" class="action-btn">Add your profile</a>
+                    <a href="#" class="action-btn">Subscribe</a>
+                </div>
+
+                <form class="box2-search" action="#">
+                    <input type="text" placeholder="Search" />
+                    <button type="submit" aria-label="Search">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+
+        <!-- BOX 3: Statistics -->
+        <div class="box3">
+            <div class="period-links">
+                <a href="#">A week</a>
+                <a href="#">Month</a>
+                <a href="#">Year</a>
+            </div>
+
+            <div class="people-count">
+                <span class="number">24857</span>
+                <span class="label">people</span>
+            </div>
+        </div>
+
+        <!-- BOX 4: People Cards -->
+        <div class="box4">
+
+            <div class="person-card">
+                <img src="toktobubu.jpg" alt="Ashymbaeva Toktobubu Abasovna">
+                <div class="person-info">
+                    <h3>Ashymbaeva Toktobubu<br>Abasovna</h3>
+                    <p class="birth"><span>11/14/1966</span> 56 years old</p>
+                    <p class="desc">Deputy Minister of Education and<br>Science of the Kyrgyz Republic</p>
+                </div>
+            </div>
+
+            <div class="person-card">
+                <img src="nuran.jpg" alt="Niyazaliev Nuran Sadyrovich">
+                <div class="person-info">
+                    <h3>Niyazaliev Nuran Sadyrovich</h3>
+                    <p class="birth"><span>1.4.1975</span> 47 years old</p>
+                    <p class="desc">ex-First Deputy Minister of Foreign<br>Affairs of the Kyrgyz Republic</p>
+                </div>
+            </div>
+
+            <div class="person-card">
+                <img src="aybarchyn.jpg" alt="Batyrbekova Aybarchyn Bakytbekovna">
+                <div class="person-info">
+                    <h3>Batyrbekova Aybarchyn<br>Bakytbekovna</h3>
+                    <p class="birth"><span>10.3.1991</span> 31 year</p>
+                    <p class="desc">head of the press service of the Main<br>Department of Internal Affairs of<br>Bishkek, police captain</p>
+                </div>
+            </div>
+
+            <div class="person-card">
+                <img src="ruslan.jpg" alt="Kazakbaev Ruslan Aitbaevich">
+                <div class="person-info">
+                    <h3>Kazakbaev Ruslan Aitbaevich</h3>
+                    <p class="birth"><span>18.5.1967</span> 55 years</p>
+                    <p class="desc">Ambassador Extraordinary and<br>Plenipotentiary of the Kyrgyz<br>Republic to Turkey</p>
+                </div>
+            </div>
+
+            <div class="person-card">
+                <img src="kubanychbek.jpg" alt="Omuraliev Kubanychbek Kasymovich">
+                <div class="person-info">
+                    <h3>Omuraliev Kubanychbek<br>Kasymovich</h3>
+                    <p class="birth"><span>15.9.1960</span> 62 years old</p>
+                    <p class="desc">Secretary General of the Organization<br>of Turkic States</p>
+                </div>
+            </div>
+
+            <div class="person-card">
+                <img src="erkin.jpeg" alt="Erkin Aidit">
+                <div class="person-info">
+                    <h3>Erkin Aidit</h3>
+                    <p class="birth"><span>2.3.1972</span> 50 years</p>
+                    <p class="desc">Ambassador Extraordinary and<br>Plenipotentiary of the Kyrgyz<br>Republic to the Kingdom of Belgium</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BOX 5: Footer -->
+        <div class="box5">
+
+            <div class="footer-logo">
+                <img src="ftr-logo1.png" alt="Who is Who footer logo">
+            </div>
+
+            <div class="footer-text">
+                <p>© News agency AKIpress, "Who is Who", 2003-2022.</p>
+                <p>The materials posted on the Who's Who website are intended for personal use only. Public distribution of materials from printed</p>
+                <p>and online publications is possible only with the written consent of the editors of "Who is who".</p>
+            </div>
+
+            <div class="footer-contacts">
+                <p>Kyrgyzstan, Bishkek, Chyngyz Aitmatov Avenue,</p>
+                <p>299/5 (Map)</p>
+                <p><a href="mailto:akipresskto@gmail.com">akipresskto@gmail.com</a></p>
+                <p><a href="mailto:kto@akipress.org">kto@akipress.org</a></p>
+            </div>
+
+        </div>
+
+        <!-- BOX 7: Sidebar -->
+        <div class="box7">
+
+            <div class="sidebar-title">
+                <span>KYRGYZSTAN</span>
+                <i class="fa fa-angle-double-down"></i>
+            </div>
+
+            <ul class="sidebar-list">
+                <li>The president</li>
+                <li>Zhogorku Kenesh</li>
+                <li>Cabinet of Ministers</li>
+                <li>Ministries and departments</li>
+                <li>Judicial system</li>
+                <li>healthcare</li>
+                <li>Strong structure</li>
+                <li>Bishkek</li>
+                <li>Osh</li>
+                <li>Batken region</li>
+                <li>Jalal-Abad region</li>
+                <li>Issyk-Kul region</li>
+                <li>Naryn region</li>
+                <li>Osh region</li>
+                <li>Talas region</li>
+                <li>Chui area</li>
+                <li>Science and education</li>
+            </ul>
+
+        </div>
+
+        <div class="box8">8</div>
+        <div class="box9">9</div>
+
+    </div>
+
+    <script>
+        /* Hamburger menu */
+        const buttonMenu = document.querySelector('.buttonMenu');
+        const boxSix = document.querySelector('.box6');
+
+        buttonMenu.addEventListener('click', () => {
+            boxSix.classList.toggle('mobileMenu');
+        });
+
+        /* Style switcher */
+        const styleSwitcher = document.getElementById("styleSwitcher");
+        const themeStyle = document.getElementById("themeStyle");
+
+        styleSwitcher.addEventListener("click", function () {
+            const currentStyle = themeStyle.getAttribute("href");
+
+            if (currentStyle === "style.css") {
+                themeStyle.setAttribute("href", "style2.css");
+            } else {
+                themeStyle.setAttribute("href", "style.css");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
